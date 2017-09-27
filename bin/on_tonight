@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "Hello World"
+require './lib/on_tonight_cli_app'
+
+OnTonight::CLI.new.call

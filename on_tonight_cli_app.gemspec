@@ -5,7 +5,7 @@ require "on_tonight_cli_app/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "on_tonight_cli_app"
-  spec.version       = OnTonightCliApp::VERSION
+  spec.version       = OnTonight::VERSION
   spec.authors       = ["'Jonathan Berkowitz'"]
   spec.email         = ["'jonrberkowitz@gmail.com'"]
 
