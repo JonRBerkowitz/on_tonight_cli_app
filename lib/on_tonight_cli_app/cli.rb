@@ -1,7 +1,7 @@
 class OnTonight::CLI
 
   def call
-    puts "Tonight's New Shows"
+    puts "What's New Tonight?""
   end
 
 end
