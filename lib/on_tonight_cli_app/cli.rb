@@ -8,7 +8,6 @@ class OnTonight::CLI
 
   def list_shows
     puts "1. The Blacklist | 8:00 PM | NBC"
-    puts "2. Modern Family | 9:00 PM | ABC"
   end
 
   def episode
@@ -16,7 +15,7 @@ class OnTonight::CLI
     puts "------------------------------"
     puts "Smokey Putnum (Season 5 | Episode 1)"
     puts "************************************"
-    puts "In the Season 5 premiere, Red — whose criminal empire is in ruins—enlists Liz in an unlikely plan to simultaneously earn cash and deliver a new Blacklister to the Task Force. As Liz faces the new reality of working alongside her father, Ressler finds himself in a precarious position and Tom weighs his options."
+    puts "In the Season 5 premiere, Red  whose criminal empire is in ruins enlists Liz in an unlikely plan to simultaneously earn cash and deliver a new Blacklister to the Task Force. As Liz faces the new reality of working alongside her father, Ressler finds himself in a precarious position and Tom weighs his options."
   end
 
   def show
@@ -36,28 +35,6 @@ class OnTonight::CLI
       puts "Which show would you like more info on? (Enter a number)"
       input = gets.strip.downcase
 
-      case input
-      when "1"
-        puts "The Blacklist | 8:00 PM | NBC"
-        puts "------------------------------"
-        puts "Would you like to see more info about"
-        puts "1. Tonight's episode"
-        puts "2. The show"
-        input = gets.strip.downcase
-          case input
-          when "1"
-            puts "#{episode}"
-            puts "What would you like to do now?"
-            puts "1. Show Description"
-          when "2"
-            puts "What would you like to do now?"
-            puts "1. Episode Decription"
-            puts "Show Description"
-          end
-          puts "2. List shows"
-          input = gets.strip.downcase
-
-      end
     end
   end
 
