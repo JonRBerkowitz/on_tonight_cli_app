@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require './lib/on_tonight_cli_app'
+require_relative '../lib/on_tonight_cli_app'
 
 OnTonight::CLI.new.call

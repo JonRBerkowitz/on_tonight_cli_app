@@ -1,0 +1,3 @@
+class OnTonight::Scraper
+
+end
