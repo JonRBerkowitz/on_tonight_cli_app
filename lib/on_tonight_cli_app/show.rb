@@ -15,8 +15,10 @@ class OnTonight::Show
     show = self.new
     show.name = i.css(".listings-program-title").text
     puts "#{show.name}"
-    show.episode = i.css(".listings-program-link").text
+    show.episode = i.css(".listings-program-episode-title .listings-program-link").text
     puts "#{show.episode}"
+    show.network = i.css(".listings-program-airing-info").text
+    puts "#{show.network}"
   end
 
 end
