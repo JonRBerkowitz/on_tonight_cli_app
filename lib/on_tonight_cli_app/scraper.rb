@@ -5,7 +5,14 @@ class OnTonight::Scraper
   end
 
   def scrape_show_index
-    puts self.get_page.css(".listings-program-content")
+    self.get_page.css(".listings-program-content")
+
+  end
+
+  def make_shows
+    scrape_show_index.each do |i|
+      OnTonight::Show.new_show(i)
+    end
   end
 
 end
