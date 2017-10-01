@@ -2,6 +2,6 @@
 
 require_relative '../lib/on_tonight_cli_app'
 
-OnTonight::Scraper.new.test
+OnTonight::Scraper.new.make_shows
 
 #OnTonight::CLI.new.call
