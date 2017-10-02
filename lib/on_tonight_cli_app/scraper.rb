@@ -18,9 +18,4 @@ class OnTonight::Scraper
     end
   end
 
-  #def scrape_show_info(show_url)
-  #  doc = scrape_show_page("http://www.tvguide.com/tvshows/curb-your-enthusiasm/100103/")
-  #  OnTonight::Show.add_info(doc)
-  #end
-
 end

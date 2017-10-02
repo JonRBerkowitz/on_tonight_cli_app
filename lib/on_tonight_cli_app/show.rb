@@ -1,9 +1,9 @@
 class OnTonight::Show
-  attr_accessor :name, :network, :description, :episode_title, :episode_description, :url, :time
+  attr_accessor :name, :network, :episode_title, :episode_description, :url, :time
 
   @@all = []
 
-  def initialize(name=nil, network=nil, description=nil, episode_title=nil, episode_description=nil, time=nil)
+  def initialize(name=nil, network=nil, episode_title=nil, episode_description=nil, time=nil)
     @@all << self
   end
 
@@ -21,11 +21,5 @@ class OnTonight::Show
     show.url = i.css("a.listings-program-link").attribute("href").value
     show
   end
-
-  #def self.add_info(i)
-  #  self.description = i.css(".tvobject-masthead-description-text").text
-  #  puts "#{self.description}"
-  #  self
-  #end
 
 end
