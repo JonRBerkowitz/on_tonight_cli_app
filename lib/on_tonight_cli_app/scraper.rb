@@ -6,7 +6,10 @@ class OnTonight::Scraper
 
   def scrape_show_index
     self.get_page.css(".listings-program-content")
+  end
 
+  def scrape_show_page(url)
+    self.get_page.css(url)
   end
 
   def make_shows
