@@ -22,4 +22,10 @@ class OnTonight::Show
     show
   end
 
+  #def self.add_info(i)
+  #  self.description = i.css(".tvobject-masthead-description-text").text
+  #  puts "#{self.description}"
+  #  self
+  #end
+
 end

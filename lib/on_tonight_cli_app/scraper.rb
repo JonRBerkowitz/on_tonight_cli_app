@@ -9,7 +9,7 @@ class OnTonight::Scraper
   end
 
   def scrape_show_page(url)
-    self.get_page.css(url)
+    Nokogiri::HTML(open(url))
   end
 
   def make_shows
@@ -17,5 +17,10 @@ class OnTonight::Scraper
       OnTonight::Show.new_show(i)
     end
   end
+
+  #def scrape_show_info(show_url)
+  #  doc = scrape_show_page("http://www.tvguide.com/tvshows/curb-your-enthusiasm/100103/")
+  #  OnTonight::Show.add_info(doc)
+  #end
 
 end
