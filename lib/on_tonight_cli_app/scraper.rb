@@ -8,13 +8,10 @@ class OnTonight::Scraper
     self.get_page.css(".listings-program-content")
   end
 
-  def scrape_show_page(url)
-    Nokogiri::HTML(open(url))
-  end
-
   def make_shows
     scrape_show_index.each do |i|
-      OnTonight::Show.new_show(i)
+      show = OnTonight::Show.new_show(i)
+      puts show.name
     end
   end
 

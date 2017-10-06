@@ -28,8 +28,6 @@ class OnTonight::CLI
       puts "------------------------------------------------"
       puts "#{OnTonight::Show.all[input.to_i - 1].episode_title}:"
       puts OnTonight::Show.all[input.to_i - 1].episode_description
-
-
     end
   end
 
