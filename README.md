@@ -1,28 +1,14 @@
 # OnTonightCliApp
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/on_tonight_cli_app`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem allows you to get the listings for all shows airing new episodes in the U.S. tonight.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'on_tonight_cli_app'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install on_tonight_cli_app
+Run `rake install` from the root directory of this gem to install app.
 
 ## Usage
 
-TODO: Write usage instructions here
+Run `on_tonight` after installing the gem.
 
 ## Development
 
