@@ -11,7 +11,7 @@ class OnTonight::Scraper
   def make_shows
     scrape_show_index.each do |i|
       show = OnTonight::Show.new_show(i)
-      puts show.name
+      show.name
     end
   end
 

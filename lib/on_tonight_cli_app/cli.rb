@@ -18,17 +18,30 @@ class OnTonight::CLI
     end
   end
 
+  def input_to_index(input)
+    input = input.to_i - 1
+  end
+
   def menu
     input = nil
     while input != "exit"
-      puts "These shows have new episodes on tonight!"
       puts "Enter a number for more info on tonight's episode."
+      puts "Enter 'exit' to end program."
       input = gets.strip.downcase
-      puts "#{OnTonight::Show.all[input.to_i - 1].name} (#{OnTonight::Show.all[input.to_i - 1].time} | #{OnTonight::Show.all[input.to_i - 1].network})"
-      puts "------------------------------------------------"
-      puts "#{OnTonight::Show.all[input.to_i - 1].episode_title}:"
-      puts OnTonight::Show.all[input.to_i - 1].episode_description
+      if input.to_i > 0
+        puts " "
+        puts "#{OnTonight::Show.all[input_to_index(input)].name} (#{OnTonight::Show.all[input.to_i - 1].time} | #{OnTonight::Show.all[input_to_index(input)].network})"
+        puts "------------------------------------------------"
+        puts "#{OnTonight::Show.all[input_to_index(input)].episode_title}:"
+        puts OnTonight::Show.all[input_to_index(input)].episode_description
+        puts " "
+        puts "Enter 'list' to list all shows again."
+      end
+      if input == "list"
+        list_shows
+      end
     end
+    puts "Goodbye!"
   end
 
 end

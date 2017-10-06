@@ -4,8 +4,6 @@ class OnTonight::Show
   @@all = []
 
   def initialize(name=nil, network=nil, episode_title=nil, episode_description=nil, time=nil)
-    @episode_title = episode_title
-    @url = url
     @@all << self
   end
 
