@@ -28,7 +28,7 @@ class OnTonight::CLI
       puts "Enter a number for more info on tonight's episode."
       puts "Enter 'exit' to end program."
       input = gets.strip.downcase
-      if input.to_i > 0
+      if input.to_i > 0 && input.to_i <= OnTonight::Show.all.length
         puts " "
         puts "#{OnTonight::Show.all[input_to_index(input)].name} (#{OnTonight::Show.all[input.to_i - 1].time} | #{OnTonight::Show.all[input_to_index(input)].network})"
         puts "------------------------------------------------"
