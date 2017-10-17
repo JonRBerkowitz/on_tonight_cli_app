@@ -10,8 +10,7 @@ class OnTonight::Scraper
 
   def make_shows
     scrape_show_index.each do |i|
-      show = OnTonight::Show.new_show(i)
-      show.name
+      OnTonight::Show.new_show(i)
     end
   end
 
