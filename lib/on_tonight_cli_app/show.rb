@@ -11,14 +11,8 @@ class OnTonight::Show
     @@all
   end
 
-  def self.new_show(i)
-    show = self.new
-    show.name = i.css(".listings-program-title").text
-    show.time = i.css(".listings-program-airing-info").text.split(" | ")[0]
-    show.network = i.css(".listings-program-airing-info").text.split(" | ")[1]
-    show.episode_title = i.css(".listings-program-episode-title .listings-program-link").text
-    show.episode_description = i.css(".listings-program-description").text
-    show
+  def self.shows_by_network(network)
+    self.all.select { |show| show.network.downcase == network.downcase }
   end
 
 end

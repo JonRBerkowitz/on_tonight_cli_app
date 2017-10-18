@@ -10,7 +10,13 @@ class OnTonight::Scraper
 
   def make_shows
     scrape_show_index.each do |i|
-      OnTonight::Show.new_show(i)
+      show = OnTonight::Show.new
+      show.name = i.css(".listings-program-title").text
+      show.time = i.css(".listings-program-airing-info").text.split(" | ")[0]
+      show.network = i.css(".listings-program-airing-info").text.split(" | ")[1]
+      show.episode_title = i.css(".listings-program-episode-title .listings-program-link").text
+      show.episode_description = i.css(".listings-program-description").text
+      show
     end
   end
 
